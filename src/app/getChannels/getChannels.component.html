@@ -1,0 +1,8 @@
+<div class="channels">
+  <h1>A list of avaliable Channels</h1>
+  <!-- <textarea id="Channels" name="Channels" rows="20" cols="50"> -->
+    <ul class="channelList">
+      <li *ngFor="let item of channels"> {{ item |json }} </li>
+    </ul>
+  <!-- </textarea> -->
+</div>

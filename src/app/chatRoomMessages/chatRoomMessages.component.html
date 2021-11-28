@@ -1,0 +1,21 @@
+<div class="allMessages">  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h2>Chat Room Messages</h2>
+  <!-- <textarea id="allMessage" name="allMessage" rows="20" cols="55"></textarea> -->
+  <ul class="messageList">
+    <li *ngFor="let item of messages"> {{ item|json }} </li>
+    
+  </ul>
+  <!-- <div class="chat-message">
+    <div class="username">{{ message.username | titlecase }}</div>
+    <div class="message">{{ message.message }}</div>
+    <div class="created-date">{{ message.created_on | date:'short' }}</div>
+    <div class="updated-date">{{ message.updated_on | date:'short' }}</div>
+  </div> -->
+  <br>
+  <button (click)="getMessages()">Get current messages</button>
+</div>

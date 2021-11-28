@@ -1,0 +1,25 @@
+<div class="chat">
+  
+  <div class="input"> 
+    <!-- <form>
+      <label>Please enter your Username</label> <br>
+      <input type="text" name="username"> <br>
+      <label>Please enter your message</label> <br>
+      <input type="text" name="message"> <br>
+      <br>
+    </form> -->
+   
+    <h2>Please enter your message</h2> 
+    <textarea id="newMessage" name="newMessage" rows="10" cols="55">   
+      *Mock Message* 
+      username: "Jane",
+      message: 'Where are you?',     
+    </textarea> 
+    <br>
+    <button (click)="postMessage()">Post Message</button>
+   <!-- <input type="submit" value="Submit"(click)="postMessage()">  -->
+  </div>
+ <app-chatRoomMessages></app-chatRoomMessages>
+
+
+</div>
