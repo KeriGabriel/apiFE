@@ -27,7 +27,8 @@ export class ChatMessageComponent implements OnInit {
   }
   
  postMessage(){
-    this.firstService.post(this.message).subscribe() 
+    this.firstService.post(this.message,'kGabriel').subscribe() 
     this.message
+    console.log(this.message);
   }
 }

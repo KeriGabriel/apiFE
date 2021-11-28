@@ -22,17 +22,18 @@ export class FirstServiceService {
  //  public getMessages(){
  //    return this.httpClient.get("http://73.19.65.35:3500/api/channel/kGabriel")
  //  }
- public getMessages(chatMessage: ChatMessage): Observable<ChatMessage>{
-  return this.httpClient.get<ChatMessage>(`${this.webUrl}/kGabriel`)
+ public getMessages(channelName: string): Observable<ChatMessage []>{
+  return this.httpClient.get<ChatMessage []>(`${this.webUrl}/${channelName}`)
  }
 
- public post(chatMessage: ChatMessage): Observable<ChatMessage>{
+ public post(chatMessage: ChatMessage, channelName: string): Observable<ChatMessage>{
   // return this.httpClient.post<ChatMessage>("http://73.19.65.35:3500/api/channel/kGabriel", chatMessage)  
-  return this.httpClient.post<ChatMessage>(`${this.webUrl}/kGabriel`, chatMessage)
+  console.log(chatMessage);
+  return this.httpClient.post<ChatMessage>(`${this.webUrl}/${channelName}`, chatMessage)
  }
  
- delete(): Observable<any> {
-  return this.httpClient.delete(`${this.webUrl}/kGabriel`);
+ delete(channelName: string): Observable<any> {
+  return this.httpClient.delete(`${this.webUrl}/${channelName}`);
  }
 
  public patch(chatMessage: ChatMessage): Observable<any> {

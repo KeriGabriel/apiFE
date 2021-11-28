@@ -16,7 +16,7 @@ export class MainComponent implements OnInit {
   }
 
   deleteChannel(){
-    this.firstService.delete().subscribe(res =>
+    this.firstService.delete('kGabriel').subscribe(res =>
     console.log(res))
     alert("Your Channel was Deleted")
     

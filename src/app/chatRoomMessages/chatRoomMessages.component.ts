@@ -11,17 +11,8 @@ import { FirstServiceService } from '../firstService.service';
 
 export class ChatRoomMessagesComponent implements OnInit {
 
-  // message: ChatMessage = {
-  //   username: '',
-  //   message: '',
-  //   id: '',
-  //   created_on: new Date(),
-  //   updated_on: new Date()
-  // }
-  public messages: any = [
-    
-    
-  ];
+  //
+  public messages: ChatMessage [] =  []
   message = this.messages[0];
   
   // @Input()
@@ -35,8 +26,10 @@ export class ChatRoomMessagesComponent implements OnInit {
   }
 
   getMessages(){
-    this.firstService.getMessages(this.message).subscribe((message) => {
-      return this.messages.push({ message });  
+    this.firstService.getMessages('kGabriel').subscribe((message) => {
+      console.log(this.messages);
+      return this.messages = message;  
+      
     });
   }
 

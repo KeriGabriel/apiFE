@@ -8,7 +8,7 @@ import { FirstServiceService } from '../firstService.service';
 })
 export class GetChannelsComponent implements OnInit {
 
- public channels: any = [];
+ public channels: any[] = [];
 
   constructor(private firstService: FirstServiceService) {
     
@@ -16,7 +16,7 @@ export class GetChannelsComponent implements OnInit {
       console.log("the component got the following channels: ", data)
       this.channels.push({
         data
-      });      
+      });    
     });
  }
   ngOnInit(): void {
