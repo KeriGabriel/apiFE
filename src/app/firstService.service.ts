@@ -27,17 +27,17 @@ export class FirstServiceService {
  }
 
  public post(chatMessage: ChatMessage, channelName: string): Observable<ChatMessage>{
-  // return this.httpClient.post<ChatMessage>("http://73.19.65.35:3500/api/channel/kGabriel", chatMessage)  
   console.log(chatMessage);
   return this.httpClient.post<ChatMessage>(`${this.webUrl}/${channelName}`, chatMessage)
  }
  
  delete(channelName: string): Observable<any> {
+   console.log(channelName, " Deleted");
   return this.httpClient.delete(`${this.webUrl}/${channelName}`);
  }
 
- public patch(chatMessage: ChatMessage): Observable<any> {
- return this.httpClient.patch<ChatMessage>(`${this.webUrl}/kGabriel`,chatMessage);
+ public patch(chatMessage: ChatMessage, channelName: string): Observable<any> {
+ return this.httpClient.patch<ChatMessage>(`${this.webUrl}/${channelName}`,chatMessage);
  }
 
 }

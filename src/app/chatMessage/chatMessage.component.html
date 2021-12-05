@@ -1,23 +1,17 @@
 <div class="chat">
   
-  <div class="input"> 
-    <!-- <form>
-      <label>Please enter your Username</label> <br>
-      <input type="text" name="username"> <br>
+  <div class="input" > 
+    <form [formGroup]="chatForm" (ngSubmit)="onSubmit()">
+      <label>Enter your Username</label> <br>
+      <input type="text" name="username" class="username" formControlName="username"> <br><br>
       <label>Please enter your message</label> <br>
-      <input type="text" name="message"> <br>
+      <input type="text" name="message" class="message" formControlName="message"> <br>
       <br>
-    </form> -->
-   
-    <h2>Please enter your message</h2> 
-    <textarea id="newMessage" name="newMessage" rows="10" cols="55">   
-      *Mock Message* 
-      username: "Jane",
-      message: 'Where are you?',     
-    </textarea> 
-    <br>
-    <button (click)="postMessage()">Post Message</button>
-   <!-- <input type="submit" value="Submit"(click)="postMessage()">  -->
+      <input type="submit" [disabled]="!chatForm.valid">
+      <br>
+      <p>Message Status: {{ chatForm.status }}</p>
+    </form>
+  
   </div>
  <app-chatRoomMessages></app-chatRoomMessages>
 

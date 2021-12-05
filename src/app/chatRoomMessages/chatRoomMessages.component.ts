@@ -16,8 +16,6 @@ export class ChatRoomMessagesComponent implements OnInit {
   message = this.messages[0];
   
   // @Input()
-   
-
   constructor(private firstService: FirstServiceService) { 
     
   }

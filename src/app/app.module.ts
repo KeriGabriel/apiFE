@@ -1,3 +1,4 @@
+import { FirstServiceService } from './firstService.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { ChatMessageComponent } from './chatMessage/chatMessage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GetChannelsComponent } from './getChannels/getChannels.component';
 import { ChatRoomMessagesComponent } from './chatRoomMessages/chatRoomMessages.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [					
@@ -24,9 +26,10 @@ import { ChatRoomMessagesComponent } from './chatRoomMessages/chatRoomMessages.c
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [FirstServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
