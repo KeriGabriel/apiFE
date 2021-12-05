@@ -8,20 +8,20 @@ import { FirstServiceService } from '../firstService.service';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private firstService: FirstServiceService) { 
+  constructor(private firstService: FirstServiceService) {
 
   }
 
   ngOnInit() {
   }
 
-  deleteChannel(){
+  deleteChannel() {
     this.firstService.delete('kGabriel').subscribe(res =>
-    console.log(res))
+      console.log(res))
     alert("Your Channel was Deleted")
-    
+
   }
-  
+
 }
 
 

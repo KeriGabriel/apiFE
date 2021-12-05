@@ -12,22 +12,20 @@ import { FirstServiceService } from '../firstService.service';
 export class ChatRoomMessagesComponent implements OnInit {
 
   //
-  public messages: ChatMessage [] =  []
+  public messages: ChatMessage[] = []
   message = this.messages[0];
-  
+
   // @Input()
-  constructor(private firstService: FirstServiceService) { 
-    
+  constructor(private firstService: FirstServiceService) {
   }
 
   ngOnInit() {
   }
 
-  getMessages(){
+  getMessages() {
     this.firstService.getMessages('kGabriel').subscribe((message) => {
       console.log(this.messages);
-      return this.messages = message;  
-      
+      return this.messages = message;
     });
   }
 

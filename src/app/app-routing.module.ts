@@ -7,9 +7,9 @@ import { MainComponent } from './main/main.component';
 //Whenever you need to specify a channel use the following as your channel name: <first inital><last name>
 //for example Jesse Harlan becomes: jharlan
 const routes: Routes = [
-  { path: '', component: MainComponent},
-  { path: 'chat', component: ChatMessageComponent},
-  { path: 'getChannels', component: GetChannelsComponent}
+  { path: '', component: MainComponent },
+  { path: 'chat', component: ChatMessageComponent },
+  { path: 'getChannels', component: GetChannelsComponent }
 
 ];
 

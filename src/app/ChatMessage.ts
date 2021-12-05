@@ -3,5 +3,5 @@ export interface ChatMessage {
     message: string,
     id: string,
     created_on: Date,
-    updated_on: Date
+    updated_on: Date | undefined
 }

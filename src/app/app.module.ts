@@ -14,14 +14,14 @@ import { ChatRoomMessagesComponent } from './chatRoomMessages/chatRoomMessages.c
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [					
+  declarations: [
     AppComponent,
-      MainComponent,
-      ChatMessageComponent,
-      NavbarComponent,
-      GetChannelsComponent,
-      ChatRoomMessagesComponent
-   ],
+    MainComponent,
+    ChatMessageComponent,
+    NavbarComponent,
+    GetChannelsComponent,
+    ChatRoomMessagesComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

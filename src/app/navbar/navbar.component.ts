@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navRoutes: any[] = [
-    { route: '', name: 'Home Page'},
-    { route: 'chat', name: 'Chat Room'}, 
-    { route: 'getChannels', name: 'Channels Room'}
+    { route: '', name: 'Home Page' },
+    { route: 'chat', name: 'Chat Room' },
+    { route: 'getChannels', name: 'Channels Room' }
   ];
 
   constructor() { }

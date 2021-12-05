@@ -1,18 +1,23 @@
 .channels{
-    margin: 2em;
-    padding:4em;
+    margin: 1em;
+    padding:1em;
     text-align: center;
-    display: flex;
+    // display: flex;
 
    
 }
 .channelList{
-    border: solid black;
-    width: 13em;
-    height: 20em;
-    padding:3em;
-    margin: 3em;  
+    columns: 3;
+    text-align: left;
+    margin: 1em;
 }
+// .channelList{
+//     border: solid black;
+//     width: 13em;
+//     height: 20em;
+//     padding:3em;
+//     margin: 3em;  
+// }
 textarea{
     margin: 1em;
 }
@@ -20,7 +25,10 @@ ul{
     list-style: none;
 }
 h1{
-    margin: 5em;
+    margin: 2em;
     text-align: center;
-    display: flex;
+    
+}
+.channelNames{
+    margin: 1em;
 }
