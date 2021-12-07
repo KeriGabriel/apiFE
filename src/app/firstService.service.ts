@@ -15,9 +15,6 @@ export class FirstServiceService {
   constructor(private httpClient: HttpClient) { }
 
   //read all end point
-  //  public get(){
-  //    return this.httpClient.get(`${this.webUrl}`);
-  //  }
   public get() {
     return this.httpClient.get<string[]>(`${this.webUrl}`);
   }
@@ -36,6 +33,12 @@ export class FirstServiceService {
   delete(channelName: string): Observable<any> {
     console.log(channelName, " Deleted");
     return this.httpClient.delete(`${this.webUrl}/${channelName}`);
+  }
+
+  public deletePost(channelName: string, id: string): Observable<any>{  
+    console.log(channelName,id) 
+    return this.httpClient.delete(`${this.webUrl}${channelName}/${id}`);
+    console.log(id, " Deleted");
   }
 
   public patch(chatMessage: ChatMessage, channelName: string): Observable<any> {

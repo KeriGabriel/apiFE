@@ -1,30 +1,20 @@
 <div class="allMessages">
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
   <h2>Chat Room Messages</h2>
-  <!-- <textarea id="allMessage" name="allMessage" rows="20" cols="55"></textarea> -->
   <ul class="messageList">
     <li *ngFor="let item of messages">
       <div class="chat-message">
-        <div class="username">Username: {{ item.username | titlecase }}</div>
-        <div class="message">Message: {{ item.message }}</div>
-        <div class="created-date">Message created: {{ item.created_on | date:'short' }}</div>
+        <div class="username"> <strong>Username:</strong> {{ item.username | titlecase }}</div>
+        <div class="message"><strong>Message:</strong> {{ item.message }}</div>
+        <div class="created-date"><strong>Message created:</strong> {{ item.created_on | date:'short' }}</div>
         <!-- change visibility when updated -->
-        <div class="updated-date" style="visibility: hidden">Message Updated: {{ item.updated_on | date:'short' }}</div>
-        <br>
+        <div class="updated-date" style="visibility: hidden"><strong>Message Updated:</strong> {{ item.updated_on |
+          date:'short' }}</div>
+        <!-- <div class="id"><strong>Id: {{ item.id }}</strong></div> -->
+        <button (click)="deletePost(item.id)">Delete Message</button>
       </div>
     </li>
-
   </ul>
-  <!-- <div class="chat-message">
-    <div class="username">{{ message.username | titlecase }}</div>
-    <div class="message">{{ message.message }}</div>
-    <div class="created-date">{{ message.created_on | date:'short' }}</div>
-    <div class="updated-date">{{ message.updated_on | date:'short' }}</div>
-  </div> -->
   <br>
   <button (click)="getMessages()">Get current messages</button>
 </div>

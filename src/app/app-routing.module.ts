@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChatMessageComponent } from './chatMessage/chatMessage.component';
+import { ChatRoomMessagesComponent } from './chatRoomMessages/chatRoomMessages.component';
 import { GetChannelsComponent } from './getChannels/getChannels.component';
 import { MainComponent } from './main/main.component';
 
@@ -9,7 +10,8 @@ import { MainComponent } from './main/main.component';
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'chat', component: ChatMessageComponent },
-  { path: 'getChannels', component: GetChannelsComponent }
+  { path: 'getChannels', component: GetChannelsComponent },
+  
 
 ];
 

@@ -1,4 +1,4 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+// import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, Input, OnInit } from '@angular/core';
 import { ChatMessage } from '../ChatMessage';
 import { FirstServiceService } from '../firstService.service';
@@ -26,6 +26,13 @@ export class ChatRoomMessagesComponent implements OnInit {
     this.firstService.getMessages('kGabriel').subscribe((message) => {
       console.log(this.messages);
       return this.messages = message;
+    });
+  }
+
+  deletePost(id: string) {
+    this.firstService.deletePost('kGabriel', id).subscribe(data => {
+      console.log(data, " Deleted");
+      this.getMessages();
     });
   }
 
